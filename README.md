@@ -18,6 +18,18 @@ sudo yum install perl-ExtUtils-Command
 #include <epicsTypes.h>
 #include <epicsEvent.h>
 
+## xxx
+**这个其实可以用命令去下载的，github有时候不灵，等5分钟可能就行了**
+命令在motor里面可以找到，在 2021年10月22日 17:45  的l123173邮件里也可以找到。
+
+
+**如果报错 Can't find file 'devPIMotor.dbd**
+（motor有时候也会出现）
+是因为motor/module没有安装，单独在git下载motor 是不包含里头的东西的，要用git命令或者单独下载。
+单独下载比较麻烦，要注意去搜索名字，对应的名字下载，才可以正常编译;
+
+当然，不想单独下，注释掉也可以。
+
 ## stream  
 **PCRE问题**
 https://epics.anl.gov/tech-talk/2020/msg02093.php  用这个版本的pcre，否则容易出问题，比如libpcre.so等等
