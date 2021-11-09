@@ -1,4 +1,7 @@
 # synapps
+先参照这个撞一下https://github.com/epics-docs/how-tos/blob/master/getting-started/linux-packages.rst
+ epel-release 那个是增强版的工具包
+
 
 ## calc
 
@@ -38,6 +41,7 @@ https://epics.anl.gov/tech-talk/2020/msg02093.php  用这个版本的pcre，否�
 
 
 ## asyn
+照着release里的模块要求装，要不然报错
 **rpc.h错误**
 1）dnf --enablerepo=powertools install rpcgen
 2）yum install libtirpc-devel, 应该可以看到/usr/include中有tirpc文件
