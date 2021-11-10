@@ -21,6 +21,16 @@ sudo yum install perl-ExtUtils-Command
 #include <epicsTypes.h>
 #include <epicsEvent.h>
 
+
+**关于motorsim**
+
+需要在注释很多东西，比如 configr/里的 RELEASE 和CONFIG_SITE (BUILD_IOCS = YES   NO改称yes）
+
+反正很多，要照着一个个的看，别光看readme，另外example 和simu是2个东西。
+
+
+
+
 ## xxx
 **这个其实可以用命令去下载的，github有时候不灵，等5分钟可能就行了**
 命令在motor里面可以找到，在 2021年10月22日 17:45  的l123173邮件里也可以找到。
