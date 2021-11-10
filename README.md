@@ -28,8 +28,9 @@ sudo yum install perl-ExtUtils-Command
 
 反正很多，要照着一个个的看，别光看readme，另外example 和simu是2个东西。
 
-
-
+标志就是motor-R7-2-2/modules/motorMotorSim/iocs/motorSimIOC  里有了bin文件
+另外，启动的时候不要用 ./st.cmd
+用这个启动../../bin/linux-x86_64/motorSim st.cmd.unix ，否则出错。
 
 ## xxx
 **这个其实可以用命令去下载的，github有时候不灵，等5分钟可能就行了**
