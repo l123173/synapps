@@ -7,6 +7,11 @@
 https://www.aps.anl.gov/BCDA/synApps/Where-to-find-it
 从这里可以下载6.1的synapps版本下来，好处是有个configure，可以直接make，是原汁原味的感觉。  
 下载下来，里面有一个assemxxxxxx.sh的脚本，那个是安装support的脚本，不过用了几次都不得其法，**建议还是不要用这个脚本了**，*直接用下载的文件安装*，如果需要更新，从https://github.com/EPICS-synApps 上下载模块去更新就好了。  
+**2 再下载**
+其实里头有很多都虽不是最新的，容易出一些bug，最好是在https://github.com/epics-modules/asyn 重新下载对应模块下来
+记得先下载，至少也要下载几个常用的，这个是不是可以用repo来了？
+不过这样的花，后面的脚本可能就用不上了
+
 **2 修改，建议分别用2个脚本该改了，自己改太繁琐**  
 里面有很多文件路径要修改，很繁琐，建议用脚本：
 sed -i "s#EPICS_BASE=/APSshare/epics/base-3.15.6#EPICS_BASE=/home/iasf/epics/base#g" `grep EPICS_BASE=/APSshare/epics/base-3.15.6 -rl ./`  
@@ -66,15 +71,20 @@ sudo yum install perl-ExtUtils-Command
 https://epics.anl.gov/tech-talk/2020/msg02093.php  用这个版本的pcre，否则容易出问题，比如libpcre.so等等
 退一步说，即使下载，也不要pcre2,pcre8.44即可，这可以在版本和tech talk上看到
 
-
+##seq
+用这个，git上太多了，也不知道用哪个
+https://www-csr.bessy.de/control/SoftDist/sequencer/
 
 ## asyn
-照着release里的模块要求装，要不然报错
+*这些是之前写的，也有点看不太懂了*
+照着release里的模块要求装，要不然报错  
 **rpc.h错误**
 1）dnf --enablerepo=powertools install rpcgen
 2）yum install libtirpc-devel, 应该可以看到/usr/include中有tirpc文件
 3）configure/CONFIG_SITE 中，注释掉 TIRPC=YES
 done
+**rpc.h的问题**
+1) 可以安装libtirpc-devel来解决。  见https://epics.anl.gov/tech-talk/2021/msg01369.php
 
 # System
 **错误**
