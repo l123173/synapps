@@ -2,13 +2,16 @@
 先参照这个安装一下https://github.com/epics-docs/how-tos/blob/master/getting-started/linux-packages.rst
 这是 epel-release 是增强版的工具包
 
-*具体的东西，在主页的readme里面*  
+*具体的东西，在epics的主页 的readme里面*  
 <font size=6>1 下载</font>  
 https://www.aps.anl.gov/BCDA/synApps/Where-to-find-it
-从这里可以下载6.1的synapps版本下来，好处是有个configure，可以直接make，是原汁原味的感觉。
-下载下来，里面有一个assemxxxxxx.sh的脚本，那个是安装support的脚本，不过用了几次都不得其法，**建议还是不要用这个脚本了**，*直接用下载的文件安装*，如果需要更新，从https://github.com/EPICS-synApps 上下载模块去更新就好了
+从这里可以下载6.1的synapps版本下来，好处是有个configure，可以直接make，是原汁原味的感觉。  
+下载下来，里面有一个assemxxxxxx.sh的脚本，那个是安装support的脚本，不过用了几次都不得其法，**建议还是不要用这个脚本了**，*直接用下载的文件安装*，如果需要更新，从https://github.com/EPICS-synApps 上下载模块去更新就好了。  
+**修改**里面有很多文件路径要修改，很繁琐，建议用脚本：
+sed -i "*s/EPICS_BASE=/APSshare/epics/base-3.15.6/*EPICS_BASE=/home/iasf/epics/base/g" `grep EPICS_BASE=/APSshare/epics/base-3.15.6 -rl ./  
+该脚本其实分2个部分，第一部分是configure/RELEASE里的原base目录，后面那个base是你电脑里的新base目录，grep那里跟的也是原来的base目录
 
-
+grep EPICS_BASE=/APSshare/epics/base-3.15.6*这部分是configure/RELEASE的base**原**目录* -rl ./*这个./是要求在support目录下执行该脚本  或者换成相应的support目录*
 
 ## calc
 
