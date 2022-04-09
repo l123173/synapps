@@ -3,7 +3,7 @@
 这是 epel-release 是增强版的工具包
 
 *具体的东西，在epics的主页 的readme里面*  
-<font size=16>1 下载</font>  
+<font size=56>1 下载</font>  
 https://www.aps.anl.gov/BCDA/synApps/Where-to-find-it
 从这里可以下载6.1的synapps版本下来，好处是有个configure，可以直接make，是原汁原味的感觉。  
 下载下来，里面有一个assemxxxxxx.sh的脚本，那个是安装support的脚本，不过用了几次都不得其法，**建议还是不要用这个脚本了**，*直接用下载的文件安装*，如果需要更新，从https://github.com/EPICS-synApps 上下载模块去更新就好了。  
