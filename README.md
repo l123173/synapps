@@ -3,11 +3,11 @@
 这是 epel-release 是增强版的工具包
 
 *具体的东西，在epics的主页 的readme里面*  
-<font size=56>1 下载</font>  
+**1 下载**  
 https://www.aps.anl.gov/BCDA/synApps/Where-to-find-it
 从这里可以下载6.1的synapps版本下来，好处是有个configure，可以直接make，是原汁原味的感觉。  
 下载下来，里面有一个assemxxxxxx.sh的脚本，那个是安装support的脚本，不过用了几次都不得其法，**建议还是不要用这个脚本了**，*直接用下载的文件安装*，如果需要更新，从https://github.com/EPICS-synApps 上下载模块去更新就好了。  
-**2修改，建议分别用2个脚本该改了，自己改太繁琐**  
+**2 修改，建议分别用2个脚本该改了，自己改太繁琐**  
 里面有很多文件路径要修改，很繁琐，建议用脚本：
 sed -i "s#EPICS_BASE=/APSshare/epics/base-3.15.6#EPICS_BASE=/home/iasf/epics/base#g" `grep EPICS_BASE=/APSshare/epics/base-3.15.6 -rl ./`  
 该脚本其实分2个部分，第一部分（base-3.15.6那里）是configure/RELEASE里的原base目录，后面那个base是你电脑里的新base目录  
@@ -15,7 +15,8 @@ sed -i "s#EPICS_BASE=/APSshare/epics/base-3.15.6#EPICS_BASE=/home/iasf/epics/bas
 *第二个脚本* 
 sed -i "s#SUPPORT=/home/oxygen40/KLANG/Epics/synApps_6_1/synApps/support#SUPPORT=/home/iasf/epics/module/synApps_6_1/support#g" `grep SUPPORT=/home/oxygen40/KLANG/Epics/synApps_6_1/synApps/support -rl ./`
 
-3 在configure/RELEASE里添加BASE和SUPPORT的地址
+**3** 
+在configure/RELEASE里添加BASE和SUPPORT的地址
 
 
 
