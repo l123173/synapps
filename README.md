@@ -1,5 +1,6 @@
 # synapps
 网上那个assemble_synApps.sh 多次尝试，确实没有按照你 base目录去修改他的，最后还是要自己改base地址，就相当于一个自动下载  
+https://github.com/NSLS-II/installSynApps    倒是这个可以尝试一下看看如何  
 先参照这个安装一下https://github.com/epics-docs/how-tos/blob/master/getting-started/linux-packages.rst
 这是 epel-release 是增强版的工具包
 
