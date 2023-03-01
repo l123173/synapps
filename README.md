@@ -101,15 +101,11 @@ https://epics.anl.gov/tech-talk/2020/msg02093.php  用这个版本的pcre，否�
 https://www-csr.bessy.de/control/SoftDist/sequencer/
 
 ## asyn
-*这些是之前写的，也有点看不太懂了*
-照着release里的模块要求装，要不然报错  
-**rpc.h错误**
-1）dnf --enablerepo=powertools install rpcgen
-2）yum install libtirpc-devel, 应该可以看到/usr/include中有tirpc文件
-3）configure/CONFIG_SITE 中，注释掉 TIRPC=YES
+**rpc.h错误**（不同版本不一样的安装命令）
+1）dnf --enablerepo=powertools install rpcgen( 详见https://epics.anl.gov/tech-talk/2022/msg01447.php 或 https://epics.anl.gov/tech-talk/2021/msg01369.php)   
+2）yum install libtirpc-devel, 应该可以看到/usr/include中有tirpc文件  
+3）configure/CONFIG_SITE 中，注释掉 TIRPC=YES**要做**  
 done
-**rpc.h的问题**
-1) 可以安装libtirpc-devel来解决。  见https://epics.anl.gov/tech-talk/2021/msg01369.php
 
 # System
 **错误**
