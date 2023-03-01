@@ -74,7 +74,7 @@ sudo yum install perl-ExtUtils-Command
 当然，不想单独下，注释掉也可以。
 
 ## areadetector
-这个要按照说明一条条的安装，像zlib，jpeg等等。install_guide里说的很详细了，照着操作。
+这个要按照说明一条条的安装，像zlib，jpeg等等。install_guide里说的很详细了，照着操作。  
 ### 需要说一下的是libjpeg。我还没有试过新的，据说速度会比较快，新的要用cmake编译，老的是用的configure。  
 ** https://blog.csdn.net/Dancer__Sky/article/details/78631577 **这个讲了新旧2种操作方式  
 不要管上面网址的删除操作，新的看上面，老的看下面即可，新老版本的参数都有介绍，对着改就好  
@@ -82,6 +82,9 @@ sudo yum install perl-ExtUtils-Command
 我使用的时候，新版本已经不是make了，而且configure以后，没有生成make文件，只有make.in 和am。  
 所以换了几个版本，1.5.3的还可以。  
 **好像需要安装nasm**  
+
+### getInteger64Param错误  
+这个需要下载新的asyn，至少4.37版本以上的   
 
 ** 注意在install_guide中，Debian系统，有单独的说明 **  
 
