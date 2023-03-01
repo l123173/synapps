@@ -73,6 +73,24 @@ sudo yum install perl-ExtUtils-Command
 
 当然，不想单独下，注释掉也可以。
 
+## areadetector
+这个要按照说明一条条的安装，像zlib，jpeg等等。install_guide里说的很详细了，照着操作。
+### 需要说一下的是libjpeg。我还没有试过新的，据说速度会比较快，新的要用cmake编译，老的是用的configure。  
+** https://blog.csdn.net/Dancer__Sky/article/details/78631577 **这个讲了新旧2种操作方式  
+不要管上面网址的删除操作，新的看上面，老的看下面即可，新老版本的参数都有介绍，对着改就好  
+首先，教程里的&am，可以忽略不用管。  
+我使用的时候，新版本已经不是make了，而且configure以后，没有生成make文件，只有make.in 和am。  
+所以换了几个版本，1.5.3的还可以。  
+**好像需要安装nasm**  
+
+** 注意在install_guide中，Debian系统，有单独的说明 **  
+
+
+
+##powerstools
+https://forums.rockylinux.org/t/how-do-i-install-powertools-on-rocky-linux-9/7427/4
+rocky9 中使用的是 dnf config-manager --enable crb 不是那个语句了。
+
 ## stream  
 **PCRE问题**
 https://epics.anl.gov/tech-talk/2020/msg02093.php  用这个版本的pcre，否则容易出问题，比如libpcre.so等等
