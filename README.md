@@ -83,6 +83,11 @@ sudo yum install perl-ExtUtils-Command
 所以换了几个版本，1.5.3的还可以。  
 **好像需要安装nasm**  
 
+### 安装ImageJ
+libnsl.so.1 can't 错误，dnf install libnsl* 解决
+然后把areaDetector module的 ADViewers/ImageJ/EPICS_areaDetector 这个文件夹，拷贝到ImageJ 的plugin文件里
+
+
 ### getInteger64Param错误  
 这个需要下载新的asyn，至少4.37版本以上的   
 
