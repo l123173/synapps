@@ -73,7 +73,7 @@ sudo yum install perl-ExtUtils-Command
 
 当然，不想单独下，注释掉也可以。
 
-## areadetector
+## areaDetector
 这个要按照说明一条条的安装，像zlib，jpeg等等。install_guide里说的很详细了，照着操作。  
 ### 需要说一下的是libjpeg。我还没有试过新的，据说速度会比较快，新的要用cmake编译，老的是用的configure。  
 ** https://blog.csdn.net/Dancer__Sky/article/details/78631577 **这个讲了新旧2种操作方式  
@@ -108,12 +108,24 @@ https://epics.anl.gov/tech-talk/2020/msg02093.php  用这个版本的pcre，否�
 用这个，git上太多了，也不知道用哪个
 https://www-csr.bessy.de/control/SoftDist/sequencer/
 
+## Seq 
+https://www-csr.bessy.de/control/SoftDist/sequencer/Installation.html#epics-base
+下载seq-2.2.6
+yum install re2c, if lexer.c error
+
 ## asyn
 **rpc.h错误**（不同版本不一样的安装命令）
 1）dnf --enablerepo=powertools install rpcgen( 详见https://epics.anl.gov/tech-talk/2022/msg01447.php 或 https://epics.anl.gov/tech-talk/2021/msg01369.php)   
 2）yum install libtirpc-devel, 应该可以看到/usr/include中有tirpc文件  
 3）configure/CONFIG_SITE 中，注释掉 TIRPC=YES**要做**  
 done
+**if rocky** 
+using this,not yum install
+https://rockylinux.pkgs.org/9/rockylinux-crb-x86_64/libtirpc-devel-1.3.3-1.el9.i686.rpm.html  
+detail show in email  
+TIRPC=yes/no two different place to find tirpc
+
+
 
 # System
 **错误**
@@ -132,6 +144,3 @@ Xm/XmP.h
 yum install motif-devel
 yum install libXp libXp-devel
 
-
-https://www-csr.bessy.de/control/SoftDist/sequencer/Installation.html#epics-base
-下载seq-2.2.6
